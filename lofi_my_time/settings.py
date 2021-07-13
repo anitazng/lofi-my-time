@@ -30,7 +30,7 @@ environ.Env.read_env()
 SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = (env('DEBUG_VALUE') == 'True')
 
 ALLOWED_HOSTS = ['lofimytime.herokuapp.com']
 
