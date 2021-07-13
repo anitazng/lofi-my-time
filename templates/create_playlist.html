@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>create a playlist</title>
+        <link rel="stylesheet" type="text/css" href="{% static "/css/main.css" %}">
+        <link href="http://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <img src="{% static "/images/lofi_clouds.png" %}" alt="lofi_clouds" class="center">
+        <h1 class="title">create a playlist</h1>
+        <form action="/creating-playlist/" method="POST">
+        {% csrf_token %}
+            <input class="form" type="number" size="40" id="time" name="time" min="0" max="470" placeholder="Enter the length of your study session in minutes" required="required"><br>
+            <input class="submit_button" type="submit" value="submit">
+        </form>
+    </body>
+</html>

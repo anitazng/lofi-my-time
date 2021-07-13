@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% load socialaccount %} 
+{% load static %}
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>lofi my time</title>
+        <link rel="stylesheet" type="text/css" href="{% static "/css/main.css" %}">
+        <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <img src="{% static "/images/lofi_clouds.png" %}" alt="lofi_clouds" class="center">
+        <h1 class="title">lofi my time</h1>
+        <div class="container">
+            <a href="{% provider_login_url "spotify" %}">
+                <button class="button">
+                    get started
+                </button>
+            </a>
+        </div>
+        <div class="links">
+            <a href="/about">about</a>
+        </div>
+    </body>
+</html>
