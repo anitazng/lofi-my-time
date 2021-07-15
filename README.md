@@ -1,4 +1,4 @@
-# lofi-my-time
+# [lofi-my-time](https://lofimytime.herokuapp.com)
 
 ## Description
 
