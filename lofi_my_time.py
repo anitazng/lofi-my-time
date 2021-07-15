@@ -160,9 +160,6 @@ access_token = sys.argv[2]
 # get study session length
 time =  int(sys.argv[1])
 
-print(access_token)
-print(time)
-
 playlist = CreatePlaylist(access_token, time)
 
 track_ids, track_uris = playlist.get_300_lofi_songs()
