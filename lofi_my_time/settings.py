@@ -159,7 +159,6 @@ LOGIN_REDIRECT_URL = 'create_playlist'
 SOCIALACCOUNT_PROVIDERS = {
     'spotify': {
         'SCOPE': [
-            'user-read-email',
             'playlist-modify-public',
             'playlist-modify-private'
         ]
