@@ -40,6 +40,8 @@ class CreatePlaylist:
             response_json = response.json()
 
             for item in response_json['items']:
+                if item is None:
+                    continue
                 track_uri = item['track']['uri']
                 track_id = item['track']['id']
                 track_uris.append(track_uri)
