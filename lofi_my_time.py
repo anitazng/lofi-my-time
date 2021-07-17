@@ -40,10 +40,13 @@ class CreatePlaylist:
             response_json = response.json()
 
             for item in response_json['items']:
-                track_uri = item['track']['uri']
-                track_id = item['track']['id']
-                track_uris.append(track_uri)
-                track_ids.append(track_id)
+                if item is None or item['track'] is None:
+                    continue
+                else:
+                    track_uri = item['track']['uri']
+                    track_id = item['track']['id']
+                    track_uris.append(track_uri)
+                    track_ids.append(track_id)
                 
             offset += 100
 
